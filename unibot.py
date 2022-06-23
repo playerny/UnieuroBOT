@@ -21,7 +21,7 @@ def readCrd():
         url = txt.split(",")[2]
         return user,pwd,url
     except:
-        print("Something went wrong")
+        print("Si è verificato un errore. Verifica il file var.txt")
 
 def login():
     try:
@@ -41,7 +41,7 @@ def login():
         #os.system("pause")
         availability()
     except:
-        print("Something went wrong")
+        print("Si è verificato un errore. Controlla le credenziali inserite")
         driver.quit()
 
 
@@ -70,7 +70,7 @@ def availability():
             avb = driver.find_element(By.CLASS_NAME, "pdp-right__buttons-container")
             avb = avb.text
     except:
-        print("Something went wrong")
+        print("Si è verificato un errore.")
         driver.quit()
 
 def checkout():
@@ -96,7 +96,7 @@ def checkout():
         close = input("Premi qualsiasi pulsante per uscire...")
         driver.quit()
     except:
-        print("Something went wrong")
+        print("Si è verificato un errore.")
         driver.quit()
 
 login()
